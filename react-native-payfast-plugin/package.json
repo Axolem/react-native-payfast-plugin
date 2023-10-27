@@ -26,8 +26,6 @@
   "bugs": {
     "url": "https://github.com/Axolem/react-native-payfast-plugin/issues"
   },
-  "homepage": "https://github.com/Axolem/react-native-payfast-plugin#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "homepage": "https://github.com/Axolem/react-native-payfast-plugin#readme"
+
 }

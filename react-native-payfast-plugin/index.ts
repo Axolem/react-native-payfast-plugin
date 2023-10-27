@@ -1,5 +1,6 @@
 import PayFast from './src/Payfast';
 import UpdateCard from './src/UpdateCard';
+import LinkPayment from './src/GenerateLink';
 import {
     CustomerDetails,
     Frequency,
@@ -24,7 +25,8 @@ export {
     ResponseData,
     Frequency, 
     UpdateCard, 
-    UpdateCardProps
+    UpdateCardProps,
+    LinkPayment
 }
 
 export default PayFast;
