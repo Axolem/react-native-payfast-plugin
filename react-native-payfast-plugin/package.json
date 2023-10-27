@@ -1,0 +1,33 @@
+{
+  "main": "index.ts",
+  "dependencies": {
+    "react-native-quick-md5": "^3.0.5",
+    "react-native-webview": "^13.2.2"
+  },
+  "name": "react-native-payfast-plugin",
+  "description": "A react native component to integrate with PayFast via a webview/API calls.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Axolem/react-native-payfast-plugin.git"
+  },
+  "keywords": [
+    "Payfast",
+    "gateway",
+    "react-native",
+    "react",
+    "native",
+    "payment",
+    "Payfast_SA",
+    "payment_Gateway"
+  ],
+  "author": "Axole Maranjana <Axolem>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Axolem/react-native-payfast-plugin/issues"
+  },
+  "homepage": "https://github.com/Axolem/react-native-payfast-plugin#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
