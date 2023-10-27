@@ -3,9 +3,10 @@ import { Button, SafeAreaView, Text } from "react-native";
 import PayFast, {
   Frequency,
   UpdateCard,
+  LinkPayment
 } from "./react-native-payfast-plugin/index";
 import React from "react";
-import LinkPayment from "./react-native-payfast-plugin/src/GenerateLink";
+
 
 export default function App() {
   const [link, setLink] = React.useState("No link");
