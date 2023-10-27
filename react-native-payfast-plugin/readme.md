@@ -2,7 +2,10 @@
 
 React Native Payfast Plugin is a React Native library for Payfast payment gateway integration. It allows you to integrate Payfast payment gateway in your React Native app with ease. It provides a simple interface to generate payment link, update card details and tokenize card details.
 
-[![npm version](https://badge.fury.io/js/react-native-payfast-plugin.svg)](https://badge.fury.io/js/react-native-payfast-plugin)
+#### This is not a Payfast official library. It is a community driven library.
+
+[![npm](https://img.shields.io/npm/v/react-native-payfast-plugin.svg)](https://www.npmjs.com/package/react-native-payfast-plugin)
+[![npm](https://img.shields.io/npm/dm/react-native-payfast-plugin.svg)](https://www.npmjs.com/package/react-native-payfast-plugin)
 [![GitHub issues](https://img.shields.io/github/issues/axolem/react-native-payfast-plugin.svg)](https://github.com/Axolem/react-native-payfast-plugin/issues)
 [![GitHub stars](https://img.shields.io/github/stars/axolem/react-native-payfast-plugin.svg)]
 [![GitHub license](https://img.shields.io/github/license/axolem/react-native-payfast-plugin.svg)]
@@ -12,9 +15,32 @@ React Native Payfast Plugin is a React Native library for Payfast payment gatewa
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/axolem/react-native-payfast-plugin.svg)]
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-closed/axolem/react-native-payfast-plugin.svg)]
 [![GitHub forks](https://img.shields.io/github/forks/axolem/react-native-payfast-plugin.svg?style=social&label=Fork)]
+[![GitHub stars](https://img.shields.io/github/stars/axolem/react-native-payfast-plugin.svg?style=social&label=Stars)]
+[![GitHub watchers](https://img.shields.io/github/watchers/axolem/react-native-payfast-plugin.svg?style=social&label=Watch)]
 
 
 ## Table of contents
+
+  - [Supported platforms](#supported-platforms)
+  - [Getting started](#getting-started)
+    - [Installation](#installation)
+    - [Supported transactions:](#supported-transactions)
+    - [Features:](#features)
+    - [Usage](#usage)
+      - [In-app payment](#in-app-payment)
+      - [Generate payment link](#generate-payment-link)
+      - [Update card details](#update-card-details)
+      - [Tokenize card details](#tokenize-card-details)
+    - [Props](#props)
+      - [PayFast](#payfast)
+        - [data](#data)
+      - [LinkPayment](#linkpayment)
+      - [UpdateCard](#updatecard)
+  - [License](#license)
+  - [Author](#author)
+  - [Help Wanted!](#help-wanted)
+  - [Credits](#credits)
+  - [Support](#support)
 
 ## Supported platforms
 
