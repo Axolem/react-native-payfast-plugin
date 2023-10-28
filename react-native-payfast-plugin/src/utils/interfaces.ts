@@ -125,7 +125,7 @@ interface PayFastProps {
     /**
      * The styles to be applied to underlying WebView.
      */
-    styles: ViewStyle,
+    styles?: ViewStyle,
 
     /**
      * The URL where PayFast will send the payment result to.
@@ -136,25 +136,25 @@ interface PayFastProps {
      * This function is called when the payment is successful.
      * @param data The data returned by PayFast.
      */
-    onSuccess: (data: ResponseData) => {},
+    onSuccess: (data: ResponseData) => void,
 
     /**
      * This function is called when the payment is cancelled.
      * @param data The data returned by PayFast.
      */
-    onCancel: (data: ResponseData) => {},
+    onCancel: (data: ResponseData) => void,
 
     /**
      * This function is called when the payment page is loaded.
      * @param data The data returned by PayFast.
      */
-    onMessage: (data: any) => {},
+    onMessage: (data: any) => void,
 
     /**
      * This function is called when the payment page is closed.
      * @param data The data returned by PayFast.
      */
-    onClose: (data: any) => {},
+    onClose: (data: any) => void,
 
     /**
      * The payment method to be used.
