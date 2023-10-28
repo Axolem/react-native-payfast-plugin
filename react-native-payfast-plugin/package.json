@@ -6,7 +6,7 @@
   },
   "name": "react-native-payfast-plugin",
   "description": "A react native component to integrate with PayFast via a webview/API calls.",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/Axolem/react-native-payfast-plugin.git"
@@ -14,12 +14,12 @@
   "keywords": [
     "Payfast",
     "gateway",
-    "react-native",
-    "react",
-    "native",
+    "react-native payfast",
     "payment",
-    "Payfast_SA",
-    "payment_Gateway"
+    "payfast",
+    "in app payments",
+    "payment gateway",
+    "ozow"
   ],
   "author": "Axole Maranjana <Axolem>",
   "license": "MIT",
@@ -27,5 +27,4 @@
     "url": "https://github.com/Axolem/react-native-payfast-plugin/issues"
   },
   "homepage": "https://github.com/Axolem/react-native-payfast-plugin#readme"
-
 }

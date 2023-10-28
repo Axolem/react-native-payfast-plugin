@@ -1,10 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { Button, SafeAreaView, Text } from "react-native";
+
 import PayFast, {
   Frequency,
   UpdateCard,
   LinkPayment
-} from "./react-native-payfast-plugin/index";
+} from "react-native-payfast-plugin";
+
 import React from "react";
 
 
@@ -42,9 +44,9 @@ export default function App() {
               // frequency: Frequency.MONTHLY,
               // cycles: "7",
               billing_date: "2021-08-01",
-              end_date: "2022-08-01",
               subscription_type: "2",
               recurring_amount: 500,
+              frequency: Frequency.DAILY
             },
           }}
           sandbox={true}
