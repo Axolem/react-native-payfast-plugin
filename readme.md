@@ -1,8 +1,6 @@
-# React Native Payfast Plugin
+# **React Native Payfast Plugin**
 
 React Native Payfast Plugin is a React Native library for Payfast payment gateway integration. It allows you to integrate Payfast payment gateway in your React Native app with ease. It provides a simple interface to generate payment link, update card details and tokenize card details.
-
-#### This is not a Payfast official library. It is a community driven library.
 
 [![npm](https://img.shields.io/npm/v/react-native-payfast-plugin.svg)](https://www.npmjs.com/package/react-native-payfast-plugin)
 [![npm](https://img.shields.io/npm/dm/react-native-payfast-plugin.svg)](https://www.npmjs.com/package/react-native-payfast-plugin)
@@ -18,34 +16,33 @@ React Native Payfast Plugin is a React Native library for Payfast payment gatewa
 [![GitHub stars](https://img.shields.io/github/stars/axolem/react-native-payfast-plugin.svg?style=social&label=Stars)]
 [![GitHub watchers](https://img.shields.io/github/watchers/axolem/react-native-payfast-plugin.svg?style=social&label=Watch)]
 
+#### **This is not a Payfast official library.**
+
+## Check out my other libraries
+
+- [React Native Ozow](https://www.npmjs.com/package/react-native-ozow)
 
 ## Table of contents
 
-  - [Supported platforms](#supported-platforms)
-  - [Getting started](#getting-started)
-    - [Installation](#installation)
-    - [Supported transactions:](#supported-transactions)
-    - [Features:](#features)
-    - [Usage](#usage)
-      - [In-app payment](#in-app-payment)
-      - [Generate payment link](#generate-payment-link)
-      - [Update card details](#update-card-details)
-      - [Tokenize card details](#tokenize-card-details)
-    - [Props](#props)
-      - [PayFast](#payfast)
-        - [data](#data)
-      - [LinkPayment](#linkpayment)
-      - [UpdateCard](#updatecard)
-  - [License](#license)
-  - [Author](#author)
-  - [Help Wanted!](#help-wanted)
-  - [Credits](#credits)
-  - [Support](#support)
-
-## Supported platforms
-
-- [x] Android
-- [x] iOS
+- [Getting started](#getting-started)
+  - [Installation](#installation)
+  - [Supported transactions:](#supported-transactions)
+  - [Features:](#features)
+  - [Usage](#usage)
+    - [In-app payment](#in-app-payment)
+    - [Generate payment link](#generate-payment-link)
+    - [Update card details](#update-card-details)
+    - [Tokenize card details](#tokenize-card-details)
+  - [Props](#props)
+    - [PayFast](#payfast)
+      - [data](#data)
+    - [LinkPayment](#linkpayment)
+    - [UpdateCard](#updatecard)
+- [License](#license)
+- [Author](#author)
+- [Help Wanted!](#help-wanted)
+- [Credits](#credits)
+- [Support](#support)
 
 ## Getting started
 
@@ -72,7 +69,8 @@ expo install react-native-payfast-plugin
 - In-app payment
 - Generate payment link
 - Update card details (for tokenized cards)
-- Slit payment (coming soon)
+- Split payment (coming soon)
+- Charge [tokenized card](#tokenize-card-details) (coming soon)
 
 ### Usage
 
@@ -246,7 +244,6 @@ Same as PayFast [data](./readme.md#PayFast)
 | sandbox    | boolean  | Set to true for sandbox mode                   |
 | onComplete | function | Callback function when card update is complete |
 
-
 ## License
 
 MIT
@@ -262,7 +259,7 @@ Axole Maranjana
 
 ## Help Wanted!
 
-This project is open for contributions. All contributions must be done via pull requests. Feel free to create issues and pull requests.
+This project is open for contributions. All contributions must be done via pull requests. Feel free to create [issues](https://github.com/Axolem/react-native-payfast-plugin/issues/new/choose) and pull requests.
 
 ## Credits
 
@@ -274,5 +271,13 @@ This project is open for contributions. All contributions must be done via pull 
 <a href="https://www.buymeacoffee.com/axolem" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150" ></a>
 
 
+## Upcomming features and virsions
+ 
+- [ ] Charge tokenized card  v1.1.0
+- [ ] Get subscription details v1.2.0
+- [ ] Cancel subscription v1.3.0
+- [ ] Pause subscription v1.4.0
+- [ ] Resume subscription v1.5.0
+- [ ] Split payment v1.6.0
 
 
