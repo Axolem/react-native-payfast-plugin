@@ -1,6 +1,6 @@
 # **React Native Payfast Plugin**
 
-React Native Payfast Plugin is a React Native library for Payfast payment gateway integration. It allows you to integrate Payfast payment gateway in your React Native app with ease. It provides a simple interface to generate payment link, update card details and tokenize card details.
+React Native Payfast Plugin is a React Native library for Payfast payment gateway integration. It allows you to integrate the Payfast payment gateway into your React Native app with ease. It provides a simple interface to accept in-app payments, generate payment links, and tokenize &  update card details.
 
 [![npm](https://img.shields.io/npm/v/react-native-payfast-plugin.svg)](https://www.npmjs.com/package/react-native-payfast-plugin)
 [![npm](https://img.shields.io/npm/dm/react-native-payfast-plugin.svg)](https://www.npmjs.com/package/react-native-payfast-plugin)
@@ -259,7 +259,7 @@ Axole Maranjana
 
 ## Help Wanted!
 
-This project is open for contributions. All contributions must be done via pull requests. Feel free to create [issues](https://github.com/Axolem/react-native-payfast-plugin/issues/new/choose) and pull requests.
+This project is open for contributions. All contributions must be made via pull requests. Feel free to create [issues](https://github.com/Axolem/react-native-payfast-plugin/issues/new/choose) and pull requests.
 
 ## Credits
 
@@ -271,7 +271,7 @@ This project is open for contributions. All contributions must be done via pull 
 <a href="https://www.buymeacoffee.com/axolem" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150" ></a>
 
 
-## Upcomming features and virsions
+## Upcoming features and versions
  
 - [ ] Charge tokenized card  v1.1.0
 - [ ] Get subscription details v1.2.0
