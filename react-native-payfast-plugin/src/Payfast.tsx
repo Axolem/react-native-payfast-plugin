@@ -81,7 +81,7 @@ const PayFast = (props: PayFastProps) => {
             thirdPartyCookiesEnabled
             mixedContentMode="always"
             style={[{ flex: 1 }, styles]}
-            source={{ html: `<html><body><h1>Loading...</h1><script>${injectedJavaScript}</script></body></html>` }}
+            source={{ html: `<html><body><script>${injectedJavaScript}</script></body></html>` }}
 
             onMessage={(event: WebViewMessageEvent) => {
                 if (event.nativeEvent.data === "PRESSED_GO_BACK") {

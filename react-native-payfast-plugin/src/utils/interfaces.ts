@@ -233,7 +233,7 @@ interface RecurringBilling {
 
 interface UpdateCardProps {
     token: string
-    onComplete: (transaction_id: string) => void
+    onComplete: (transaction_id: string | null) => void
     styles?: ViewStyle
     sandbox?: boolean
 }

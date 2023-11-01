@@ -1,5 +1,14 @@
 {
   "main": "index.ts",
+  "main-internal": "src/index.ts",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "types": "./index.d.ts"
+    },
+    "./src": null
+  },
   "dependencies": {
     "react-native-quick-md5": "^3.0.5",
     "react-native-webview": "^13.2.2"
