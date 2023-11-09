@@ -25,12 +25,32 @@ const clearNullValues = (map: Map<string, string | number>, passPhrase?: string)
     return newMap;
 };
 
+const clearNullValuesFunc = (data: { [key: string]: any }): { [key: string]: any } => {
+    const ordered_data: { [key: string]: any } = {};
 
+    Object.keys(data).sort().forEach(value => {
+        if (value !== null && value !== "" && value !== undefined && value) {
+            ordered_data[value] = data[value];
+        }
+    });
 
+    return ordered_data;
+}
 
+// Signature generation
+const generateAPISignature = (data: { [key: string]: any }, passPhrase: string | null = null): string => {
+    const data_ = clearNullValuesFunc({ passphrase: passPhrase, ...data });
 
+    let getString = '';
+    for (const key in data_) {
+        getString += `${key}=${encodeURIComponent(data_[key]).replace(/%20/g, '+')}&`;
+    }
 
+    // Remove the last '&'
+    getString = getString.substring(0, getString.length - 1);
 
+    // Hash the data and create the signature
+    return stringMd5(getString).toLowerCase();
+}
 
-
-export { clearNullValues }
+export { clearNullValues, generateAPISignature, clearNullValuesFunc }

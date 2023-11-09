@@ -5,7 +5,7 @@
   "exports": {
     ".": {
       "import": "./index.ts",
-      "types": "./index.d.ts"
+      "types": "./declarations/index.d.ts"
     },
     "./src": null
   },

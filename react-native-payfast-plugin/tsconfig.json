@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-native",
     "strict": true,
     "target": "ESNext",
     "declaration": true,
@@ -11,6 +11,7 @@
     "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "outDir": "./declarations"
   }
 }

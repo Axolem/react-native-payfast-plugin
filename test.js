@@ -1,0 +1,1 @@
+console.log(new Date().toISOString().split('.')[0]);

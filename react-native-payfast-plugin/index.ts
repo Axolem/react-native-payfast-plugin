@@ -1,6 +1,7 @@
 import PayFast from './src/Payfast';
 import UpdateCard from './src/UpdateCard';
 import LinkPayment from './src/GenerateLink';
+import Subsciption from './src/Subscription';
 import {
     CustomerDetails,
     Frequency,
@@ -26,7 +27,8 @@ export {
     Frequency, 
     UpdateCard, 
     UpdateCardProps,
-    LinkPayment
+    LinkPayment,
+    Subsciption
 }
 
 export default PayFast;

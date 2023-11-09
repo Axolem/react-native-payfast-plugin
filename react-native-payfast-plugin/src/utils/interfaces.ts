@@ -204,7 +204,7 @@ interface RecurringBilling {
      *  5 = biannually
      *  6 = annually
      */
-    frequency: Frequency,
+    frequency?: Frequency,
 
     /**
      * The number of times the subscription payment will be made. Set to 0 for indefinite subscription.
