@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@types/react": "~18.2.14",
+    "@types/react": "~18.2.34",
     "expo": "~49.0.15",
     "expo-status-bar": "~1.9.0",
     "md5": "^2.3.0",
