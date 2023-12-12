@@ -1,4 +1,4 @@
-import { clearNullValuesFunc, generateAPISignature } from "./utils/funtions";
+import { clearNullValuesFunc, generateAPISignature, generateTimestamp } from "./utils/funtions";
 
 class Subsciption {
     private merchant_id: string;
@@ -42,7 +42,7 @@ class Subsciption {
     public async chargeTokenizedCard(transactionDetails: TransactionData): Promise<ChargeResponse> {
 
         try {
-            const timestamp = new Date().toISOString().split('.')[0];
+            const timestamp = generateTimestamp()
             const data = {
                 ...transactionDetails,
                 'merchant-id': this.merchant_id,
@@ -50,10 +50,15 @@ class Subsciption {
                 'timestamp': timestamp,
                 token: this.token
             }
-            const Hash = generateAPISignature(data, this.passphrase)
+            const Hash = generateAPISignature(
+                data,
+                this.passphrase
+            );
 
             const body = clearNullValuesFunc(transactionDetails)
 
+            console.log(body);
+            
 
             const response = await fetch(`${this.url}adhoc?testing=${this.testMode}`, {
                 method: 'POST',
@@ -112,13 +117,13 @@ class Subsciption {
                     'merchant-id': this.merchant_id,
                     'version': 'v1',
                     'timestamp': timestamp,
-                    'signature': generateAPISignature({
-                        ...transactionDetails,
-                        'merchant-id': this.merchant_id,
-                        'version': 'v1',
-                        'timestamp': timestamp,
-                        token: this.token
-                    }, this.passphrase)
+                    // 'signature': generateAPISignature({
+                    //     ...transactionDetails,
+                    //     'merchant-id': this.merchant_id,
+                    //     'version': 'v1',
+                    //     'timestamp': timestamp,
+                    //     token: this.token
+                    // }, this.passphrase)
                 },
                 body: JSON.stringify(clearNullValuesFunc(transactionDetails))
             })
@@ -166,13 +171,13 @@ class Subsciption {
                     'merchant-id': this.merchant_id,
                     'version': 'v1',
                     'timestamp': timestamp,
-                    'signature': generateAPISignature({
-                        cycles,
-                        'merchant-id': this.merchant_id,
-                        'version': 'v1',
-                        'timestamp': timestamp,
-                        token: this.token
-                    }, this.passphrase)
+                    // 'signature': generateAPISignature({
+                    //     cycles,
+                    //     'merchant-id': this.merchant_id,
+                    //     'version': 'v1',
+                    //     'timestamp': timestamp,
+                    //     token: this.token
+                    // }, this.passphrase)
                 },
                 body: JSON.stringify(clearNullValuesFunc({ cycles }))
             })
@@ -220,12 +225,12 @@ class Subsciption {
                     'merchant-id': this.merchant_id,
                     'version': 'v1',
                     'timestamp': timestamp,
-                    'signature': generateAPISignature({
-                        'merchant-id': this.merchant_id,
-                        'version': 'v1',
-                        'timestamp': timestamp,
-                        token: this.token
-                    }, this.passphrase)
+                    // 'signature': generateAPISignature({
+                    //     'merchant-id': this.merchant_id,
+                    //     'version': 'v1',
+                    //     'timestamp': timestamp,
+                    //     token: this.token
+                    // }, this.passphrase)
                 }
             })
             return await response.json() as ChargeResponse
@@ -251,12 +256,12 @@ class Subsciption {
                     'merchant-id': this.merchant_id,
                     'version': 'v1',
                     'timestamp': timestamp,
-                    'signature': generateAPISignature({
-                        'merchant-id': this.merchant_id,
-                        'version': 'v1',
-                        'timestamp': timestamp,
-                        token: this.token
-                    }, this.passphrase)
+                    // 'signature': generateAPISignature({
+                    //     'merchant-id': this.merchant_id,
+                    //     'version': 'v1',
+                    //     'timestamp': timestamp,
+                    //     token: this.token
+                    // }, this.passphrase)
                 }
             })
             return await response.json() as ChargeResponse

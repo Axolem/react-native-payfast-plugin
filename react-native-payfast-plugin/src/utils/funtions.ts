@@ -35,22 +35,41 @@ const clearNullValuesFunc = (data: { [key: string]: any }): { [key: string]: any
     });
 
     return ordered_data;
-}
+};
 
-// Signature generation
-const generateAPISignature = (data: { [key: string]: any }, passPhrase: string | null = null): string => {
-    const data_ = clearNullValuesFunc({ passphrase: passPhrase, ...data });
+const generateAPISignature = (data: Record<string, any>, passPhrase: string | null = null): string => {
+    // Arrange the array by key alphabetically for API calls
+    const ordered_data: Record<string, any> = {};
+    Object.keys(data).sort().forEach(key => {
+        ordered_data[key] = data[key];
+    });
+    data = ordered_data;
 
+    // Create the get string
     let getString = '';
-    for (const key in data_) {
-        getString += `${key}=${encodeURIComponent(data_[key]).replace(/%20/g, '+')}&`;
+    for (const key in data) {
+        getString += `${key}=${encodeURIComponent(data[key]).replace(/%20/g, '+')}&`;
     }
 
     // Remove the last '&'
     getString = getString.substring(0, getString.length - 1);
+    if (passPhrase !== null) {
+        getString += `&passphrase=${encodeURIComponent(passPhrase.trim()).replace(/%20/g, "+")}`;
+    }
 
     // Hash the data and create the signature
     return stringMd5(getString).toLowerCase();
+};
+
+function generateTimestamp(): string {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = `${(now.getMonth() + 1)}`.padStart(2, '0');
+    const day = `${now.getDate()}`.padStart(2, '0');
+    const hours = `${now.getHours()}`.padStart(2, '0');
+    const minutes = `${now.getMinutes()}`.padStart(2, '0');
+    const seconds = `${now.getSeconds()}`.padStart(2, '0');
+    return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
 }
 
-export { clearNullValues, generateAPISignature, clearNullValuesFunc }
+export { clearNullValues, generateAPISignature, clearNullValuesFunc, generateTimestamp }
