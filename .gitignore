@@ -35,3 +35,4 @@ yarn-error.*
 *.tsbuildinfo
 *.d.ts
 package-lock.json
+App.tsx
