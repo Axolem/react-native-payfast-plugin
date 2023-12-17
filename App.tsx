@@ -20,18 +20,16 @@ import React from "react";
 export default function App() {
   const [link, setLink] = React.useState("No link");
 
-  const subscription = new Subsciption("10031584", "06ce12dc-c2be-42d8-abfb-876757b19b7b", "thisisatestforthe", true);
-
-
+  const subscription = new Subsciption("18753352", "06ce12dc-c2be-42d8-abfb-876757b19b7b", "GPBUSDZaR15.178", true);
   return (
     <SafeAreaView style={{ paddingTop: 40, flex: 1 }}>
       <StatusBar style="auto" />
-      {false ? (
+      {true ? (
         <PayFast
           data={{
             merchantDetails: {
-              merchant_id: "10031584",
-              merchant_key: "5n52c1qu5501c",
+              merchant_id: "18753352",
+              merchant_key: "8juvzu22esbxc",
               notify_url:
                 "https://webhook.site/f30e4b32-15b5-44e6-ae0b-c75486b8797d",
             },
@@ -43,7 +41,7 @@ export default function App() {
             },
             transactionDetails: {
               m_payment_id: "1234",
-              amount: "10.00",
+              amount: "0.00",
               item_name: "Item Name",
               item_description: "Item Description",
             },
@@ -52,16 +50,16 @@ export default function App() {
               confirmation_address: "axolemaranjana4@gmail.com",
             },
             recurringBilling: {
-              //frequency: Frequency.MONTHLY,
-              //cycles: "7",
-              //billing_date: "2021-08-01",
+              frequency: Frequency.ANNUALLY,
+              cycles: "7",
+              billing_date: "2021-08-01",
               subscription_type: "2",
-              recurring_amount: 500,
+              recurring_amount: 5,
               //frequency: Frequency.DAILY
             },
           }}
-          sandbox={true}
-          passphrase="thisisatestforthe"
+          sandbox={false}
+          passphrase="GPBUSDZaR15.178"
           onCancel={(data) => {
             console.log("Payment cancelled: ", data.transaction_id);
           }}
@@ -79,7 +77,7 @@ export default function App() {
         <UpdateCard
           token="d33e90c2-f09d-48b2-9ccb-d9129822eafb"
           onComplete={(data) => console.log(data)}
-          sandbox={true}
+          sandbox={false}
         />
       ) : (
         <View style={{ gap: 10, padding: 20 }}>
@@ -141,8 +139,8 @@ export default function App() {
               const link = new LinkPayment(
                 {
                   merchantDetails: {
-                    merchant_id: "10031584",
-                    merchant_key: "5n52c1qu5501c",
+                    merchant_id: "18753352",
+                    merchant_key: "8juvzu22esbxc",
                     notify_url:
                       "https://webhook.site/f30e4b32-15b5-44e6-ae0b-c75486b8797d",
                   },
@@ -163,18 +161,21 @@ export default function App() {
                     confirmation_address: "axolemaranjana4@gmail.com",
                   },
                 },
-                true,
-                "thisisatestforthe"
+                false,
+                "GPBUSDZaR15.178"
               );
 
               link.cancel_url = "https://www.google.com/search?q=cancel";
               link.return_url = "https://www.google.com/search?q=success";
 
               link.getLink().then((link) => {
+               
+                
                 setLink(link);
               });
             }}
           />
+          
           <Text>{link}</Text>
         </View>
       )}
